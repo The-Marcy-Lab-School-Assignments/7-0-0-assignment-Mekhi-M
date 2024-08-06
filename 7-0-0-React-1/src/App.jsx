@@ -2,9 +2,10 @@ import { useState } from 'react'
 import './App.css'
 
 // component imports
-import { FontSizerButtons } from './components/FontSizeButtons'
+import { FontSizeButtons } from './components/FontSizeButtons'
 import { Greeting } from './components/Greeting'
 import { LanguageButtons } from './components/LanguageButtons'
+
 
 function App() {
   const [fontSizeEM, setFontSizeEM] = useState(3.2)
@@ -22,8 +23,8 @@ function App() {
   const hawaiian = () => setGreeting('Aloha kakahiaka')
 
   return (
-    <>
-      <FontSizerButtons 
+    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <FontSizeButtons 
         increment={increment} 
         decrement={decrement} />
       <Greeting greeting={greeting} size={fontSizeEM}/>
@@ -34,7 +35,7 @@ function App() {
         japanese={japanese} 
         haitian={haitian} 
         hawaiian={hawaiian}/>
-    </>
+    </section>
   )
 }
 

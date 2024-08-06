@@ -1,4 +1,4 @@
-export const FontSizerButtons = ({increment, decrement}) => {
+export const FontSizeButtons = ({increment, decrement}) => {
   return (
     <section style={{display: 'flex', justifyContent: 'center', gap: '5rem'}}>
       <button onClick={increment}>+</button>
